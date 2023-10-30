@@ -1,0 +1,22 @@
+.social-media {
+	position: absolute;
+	bottom: 20px;
+	z-index: 999;
+	display: flex;
+	gap: 2rem;
+	left: 50%;
+}
+
+.social-media img {
+	width: 30px;
+}
+
+.social-media img:hover {
+	opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+	.social-media {
+		left: 37%;
+	}
+}
