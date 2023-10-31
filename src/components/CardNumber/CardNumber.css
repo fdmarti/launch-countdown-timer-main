@@ -8,8 +8,15 @@
 
 .card {
 	position: relative;
-	color: var(--softRed);
 	font-size: 95px;
+}
+
+body.day .card {
+	color: var(--numbersColorDay);
+}
+
+body.night .card {
+	color: var(--numbersColorNight);
 }
 
 .card::after,
@@ -17,10 +24,19 @@
 	content: '';
 	width: 140px;
 	height: 50%;
-	background-color: var(--darkSatured);
 	position: absolute;
 	left: 0;
 	z-index: -1;
+}
+
+body.day .card::after,
+body.day .card::before {
+	background-color: var(--cardDayColor);
+}
+
+body.night .card::after,
+body.night .card::before {
+	background-color: var(--darkSatured);
 }
 
 .card::after {
@@ -36,8 +52,15 @@
 
 .text-card {
 	text-transform: uppercase;
-	color: var(--grayishBlue);
 	font-size: 17px;
+}
+
+body.night .text-card {
+	color: var(--grayishBlue);
+}
+
+body.day .text-card {
+	color: var(--white);
 }
 
 @media (max-width: 900px) {

@@ -4,3 +4,11 @@
 	bottom: 0;
 	left: 0;
 }
+
+body.day .pattern-hills {
+	content: url('/images/pattern-hills-day.svg');
+}
+
+body.night .pattern-hills {
+	content: url('/images/pattern-hills-night.svg');
+}

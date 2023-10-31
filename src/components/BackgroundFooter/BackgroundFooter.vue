@@ -4,9 +4,5 @@
 </script>
 <template>
 	<SocialNetwork />
-	<img
-		src="/images/pattern-hills.svg"
-		alt="hills patter background image"
-		class="pattern-hills"
-	/>
+	<img alt="hills patter background image" class="pattern-hills" />
 </template>

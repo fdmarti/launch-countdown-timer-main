@@ -2,11 +2,16 @@
 
 :root {
 	--grayishBlue: #8486a9;
-	--softRed: #fb6087;
 	--white: hsl(0, 0%, 100%);
 	--darkSatured: hsl(236, 21%, 26%);
-	--veryDarkBlue: hsl(235, 16%, 14%);
 	--veryDarkDarkBlue: hsl(234, 17%, 12%);
+
+	--dayColor: #00a1de;
+	--cardDayColor: #003061;
+	--numbersColorDay: #e5f0ff;
+
+	--nightColor: hsl(235, 16%, 14%);
+	--numbersColorNight: #fb6087;
 }
 
 * {
@@ -16,7 +21,6 @@
 }
 
 body {
-	background: url('/images/bg-stars.svg') center, var(--veryDarkBlue);
 	position: relative;
 	height: 100vh;
 }
@@ -28,6 +32,14 @@ h1 {
 	font-size: 20px;
 	letter-spacing: 6px;
 	padding-top: 200px;
+}
+
+.day {
+	background: none, var(--dayColor);
+}
+
+.night {
+	background: url('/images/bg-stars.svg') center, var(--nightColor);
 }
 
 .timer {
