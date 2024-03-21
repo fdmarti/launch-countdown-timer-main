@@ -2,6 +2,7 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	width: 140px;
 	gap: 3rem;
 }
@@ -9,6 +10,7 @@
 .card {
 	position: relative;
 	font-size: 95px;
+	width: 190px;
 }
 
 body.day .card {
@@ -22,7 +24,8 @@ body.night .card {
 .card::after,
 .card::before {
 	content: '';
-	width: 140px;
+	display: inline-block;
+	width: 100%;
 	height: 50%;
 	position: absolute;
 	left: 0;
@@ -72,19 +75,9 @@ body.day .text-card {
 	.card {
 		font-size: 42px;
 	}
-
-	.card::after,
-	.card::before {
-		width: 100px;
-	}
 }
 
 @media (max-width: 600px) {
-	.block-card {
-		gap: 1rem;
-		width: 100%;
-		text-align: center;
-	}
 	.card {
 		font-size: 32px;
 	}
@@ -93,8 +86,7 @@ body.day .text-card {
 		font-size: 14px;
 	}
 
-	.card::after,
-	.card::before {
-		width: 100%;
+	.timer {
+		flex-direction: column;
 	}
 }

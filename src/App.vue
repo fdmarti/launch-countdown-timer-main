@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { reactive } from 'vue';
+	import { reactive, ref } from 'vue';
 	import type Time from './interfaces/Time';
 
 	import BackgroundFooter from './components/BackgroundFooter/BackgroundFooter.vue';
@@ -13,9 +13,14 @@
 		seconds: 0,
 	});
 
+	const nextYear = ref<Number>();
+
 	const getCurrentTime = (): void => {
 		const date: any = new Date();
-		const newYearDate: any = new Date('January 1, 2024, 00:00:00');
+
+		const thisYear = date.getFullYear();
+		const newYearDate: any = new Date(`January 1, ${thisYear + 1}, 00:00:00`);
+		nextYear.value = thisYear + 1;
 
 		time.difference = newYearDate - date;
 
@@ -34,13 +39,12 @@
 </script>
 
 <template>
-	<h1>Days until 2024</h1>
+	<h1>Days until {{ nextYear }}</h1>
 	<div class="timer">
 		<CardNumber :code="time.days" text="days" />
 		<CardNumber :code="time.hours" text="hours" />
 		<CardNumber :code="time.minutes" text="minutes" />
 		<CardNumber :code="time.seconds" text="seconds" />
 	</div>
-
 	<BackgroundFooter />
 </template>
